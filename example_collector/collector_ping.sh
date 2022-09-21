@@ -1,0 +1,1 @@
+echo "" > /var/run/viewmon/ping; for ipAdr in "8.8.8.8" "192.168.23.1" "192.168.20.1" "192.168.24.1" "192.168.26.1" "192.168.99.1"; do ping $ipAdr -w 1 > /dev/null ; if ! [[ $? == 0 ]]; then echo "Недоступно $ipAdr</br>" >> /var/run/viewmon/ping; fi; done

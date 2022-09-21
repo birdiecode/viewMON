@@ -1,0 +1,11 @@
+[Unit]
+Description=viewMON
+After=nginx.service
+
+[Service]
+User=viewmon
+Group=viewmon
+ExecStart=/usr/bin/viewmond
+
+[Install]
+WantedBy=multi-user.target 
