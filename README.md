@@ -75,7 +75,7 @@ systemctl enable viewmon
 
 ```shell
 mv ./nginx.conf /etc/nginx/sites-available/viewmon
-pushelld /etc/nginx/sites-enabled/
+pushd /etc/nginx/sites-enabled/
 ln -s ../sites-available/viewmon ./viewmon
 rm ./default # возможно его надо удалить чтобы не было конфликта
 popd
